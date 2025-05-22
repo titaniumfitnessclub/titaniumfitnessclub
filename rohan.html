@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rohan- Trainer | Titanium Fitness</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <style>
+    /* Basic Reset & Theme */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    :root {
+      --primary-color: #ff6b6b;
+      --secondary-color: #333;
+      --light-color: #f8f9fa;
+      --dark-color: #212529;
+      --gray-color: #6c757d;
+    }
+
+    body {
+      line-height: 1.6;
+      color: var(--secondary-color);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .btn {
+      background: var(--primary-color);
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #ff5252;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+    }
+
+    /* Header */
+    header {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      padding: 15px 0;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo h1 {
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      font-weight: 800;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      color: var(--secondary-color);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    nav ul li a:hover {
+      color: var(--primary-color);
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    /* Trainer Profile Section */
+    .trainer-profile {
+      padding: 140px 0 100px;
+      background-color: var(--light-color);
+    }
+
+    .trainer-wrapper {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .trainer-photo {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .trainer-photo img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .trainer-details {
+      flex: 2;
+    }
+
+    .trainer-details h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .trainer-details p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark-color);
+      color: white;
+      padding: 70px 0 20px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .footer-logo h2 {
+      color: white;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .footer-logo p {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer-links h3,
+    .footer-social h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 0.3s ease;
+    }
+
+    .footer-links ul li a:hover {
+      color: var(--primary-color);
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    .social-icons a:hover {
+      color: var(--primary-color);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .trainer-wrapper {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+  <link rel="icon" type="image/jpg" href="images/favicon.jpg">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <div class="logo"><h1>Titanium Fitness</h1></div>
+      <nav>
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#facilities">Facilities</a></li>
+          <li><a href="index.html#trainers">Trainers</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-btn"><a href="https://wa.me/9818170332" class="btn">Join Now</a></div>
+      <div class="mobile-menu"><i class="fas fa-bars"></i></div>
+    </div>
+  </header>
+
+  <!-- TRAINER PROFILE -->
+  <section class="trainer-profile">
+    <div class="container">
+      <div class="trainer-wrapper">
+        <div class="trainer-photo">
+          <img src="images/rohan.jpg" alt="John Doe">
+        </div>
+        <div class="trainer-details">
+          <h2>Rohan</h2>
+          <p>Rohan is a nationally certified strength and conditioning coach with over 10 years of experience in personal training, functional fitness, and sports performance.</p>
+          <p>Known for his intense but encouraging training style, he’s helped hundreds of clients achieve their physical goals and build lasting confidence. Whether you're a beginner or a seasoned gym-goer, Rohan's dynamic approach ensures your workouts are effective, safe, and motivating.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align: center; margin-top: 40px;">
+    <a href="index.html#trainers" class="btn">← Back to Home</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>Titanium Fitness</h2>
+          <p>Your journey to a healthier life starts here.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#facilities">Facilities</a></li>
+            <li><a href="index.html#trainers">Trainers</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Titanium Fitness. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
